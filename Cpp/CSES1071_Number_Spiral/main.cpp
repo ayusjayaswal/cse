@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+ unsigned long long y, x;
+  cin >> y >> x;
+ unsigned long long ans;
+  if (y >= x)
+    y & 1 ? ans = ((y - 1) * (y - 1) + 1) + (x - 1) : ans = y * y - (x - 1);
+  else
+    x & 1 ? ans = x * x - (y - 1) : ans = ((x - 1) * (x - 1) + 1) + (y - 1);
+  cout << ans << "\n";
+}
+
+int main() {
+  long int t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
+  return 0;
+}

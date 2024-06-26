@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+  int n;
+  cin >> n;
+  vector<int> a;
+  for(int i = 0;i<n;i++){
+    int x;
+    cin >> x;
+    a.push_back(x);
+  }
+  vector<int> f(27,0);
+  // for (auto i : a) {
+  //   cout << (char)('a' + f[i%26]);
+  //   f[i]++;}
+  // cout << "\n";
+  for(int i = 0;i<26;i++){
+    // f[i-a[i]]++;
+    for(auto &j:f){
+      if(j==a[i]-1){j++;break;}
+    }
+  }
+  for(int i = 0;i<26;++i){
+    cout << (char)('a'+i)<<" " << f[i]<< "\n";
+
+  }
+ // for(int i = 0;i<26;i++){
+ //   for(int j = 0;j<f[i];++j){
+ //     cout <<(char)('a'+i) << " ";
+
+ //   }
+ // }
+}
+
+int main(){
+  int t;
+  cin >> t;
+  while(t--){
+    solve();
+  }
+  return 0;
+}
