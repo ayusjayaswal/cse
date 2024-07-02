@@ -1,10 +1,11 @@
 
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long int
 #define all(v) v.begin(),v.end()
 #define getvec(v) for(auto &i: v){cin >> i;}
-#define fi(i,N) for(int i = 0; i < N; ++i)
+#define fi(i,N) for(ll i = 0; i < N; ++i)
 
 void solve() {
         int n;
@@ -13,11 +14,15 @@ void solve() {
         for (int i = 0; i < n; ++i) {
             cin >> h[i];
         }
-	for(int i = n-2;i>=0;--i){
+	ll mx = 0;
+	// for(int i = n-2;i>=0;--i){
+	fi(i,n){
 	  //set height jo elapsed pr ho h[i] ki
-	  h[i] = max(h[i],h[i+1]+1);
+	  // h[i] = max(h[i],h[i+1]+1);
+	  mx = max(mx,(h[i]+i));
 	}
-	cout << h[0] << "\n";
+	// cout << h[0] << "\n";
+	cout << mx << "\n";
 
 }
 
