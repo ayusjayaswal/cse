@@ -1,0 +1,7 @@
+* Compilers
+HLL -> Compiler -> LLL (equivalent)
+
+*** CPCALINKERLOAD = GCC|CLANG|TURBO
+C-> Pre-Processor -> Compiler -> Assembler -> Linker -> Loader
+
+* Phases of Compiler
